@@ -7,12 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		7811A8C21F6E418700FE18DF /* gtest_main.cc in Sources */ = {isa = PBXBuildFile; fileRef = 7811A8C01F6E418700FE18DF /* gtest_main.cc */; };
-		7811A8C31F6E418700FE18DF /* gtest-all.cc in Sources */ = {isa = PBXBuildFile; fileRef = 7811A8C11F6E418700FE18DF /* gtest-all.cc */; };
 		7811A8C41F6E418F00FE18DF /* gtest-all.cc in Sources */ = {isa = PBXBuildFile; fileRef = 7811A8C11F6E418700FE18DF /* gtest-all.cc */; };
 		7811A8D21F6E41CC00FE18DF /* libgtest.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7811A8BC1F6E40AE00FE18DF /* libgtest.a */; };
 		7811A8D31F6E420000FE18DF /* gtest_main.cc in Sources */ = {isa = PBXBuildFile; fileRef = 7811A8C01F6E418700FE18DF /* gtest_main.cc */; };
 		7811A8D51F6E438800FE18DF /* unittest-gtest.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7811A8D41F6E438800FE18DF /* unittest-gtest.cpp */; };
+		7811A8D91F6E44F500FE18DF /* benchmark.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7811A8D71F6E44F500FE18DF /* benchmark.cpp */; };
+		7811A8DA1F6E44F500FE18DF /* benchmark.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 7811A8D81F6E44F500FE18DF /* benchmark.hpp */; };
+		7811A8DD1F6E454200FE18DF /* sequence.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7811A8DB1F6E454200FE18DF /* sequence.cpp */; };
+		7811A8DE1F6E454200FE18DF /* sequence.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 7811A8DC1F6E454200FE18DF /* sequence.hpp */; };
+		7811A8E01F6E4AE000FE18DF /* unittest-benchmark.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7811A8DF1F6E4AE000FE18DF /* unittest-benchmark.cpp */; };
+		7811A8E31F6E4B6D00FE18DF /* libvt.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7811A8AE1F6E3C8C00FE18DF /* libvt.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -22,6 +26,13 @@
 			proxyType = 1;
 			remoteGlobalIDString = 7811A8BB1F6E40AE00FE18DF;
 			remoteInfo = gtest;
+		};
+		7811A8E11F6E4B6600FE18DF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7811A8A61F6E3C8C00FE18DF /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7811A8AD1F6E3C8C00FE18DF;
+			remoteInfo = vt;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -44,6 +55,11 @@
 		7811A8C11F6E418700FE18DF /* gtest-all.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = "gtest-all.cc"; path = "dependencies/googletest/src/gtest-all.cc"; sourceTree = "<group>"; };
 		7811A8C91F6E41BF00FE18DF /* runUnitTests */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = runUnitTests; sourceTree = BUILT_PRODUCTS_DIR; };
 		7811A8D41F6E438800FE18DF /* unittest-gtest.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = "unittest-gtest.cpp"; path = "libvt/test/unittest-gtest.cpp"; sourceTree = "<group>"; };
+		7811A8D71F6E44F500FE18DF /* benchmark.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = benchmark.cpp; path = libvt/src/benchmark/benchmark.cpp; sourceTree = "<group>"; };
+		7811A8D81F6E44F500FE18DF /* benchmark.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = benchmark.hpp; path = libvt/src/benchmark/benchmark.hpp; sourceTree = "<group>"; };
+		7811A8DB1F6E454200FE18DF /* sequence.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = sequence.cpp; path = libvt/src/benchmark/sequence.cpp; sourceTree = "<group>"; };
+		7811A8DC1F6E454200FE18DF /* sequence.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = sequence.hpp; path = libvt/src/benchmark/sequence.hpp; sourceTree = "<group>"; };
+		7811A8DF1F6E4AE000FE18DF /* unittest-benchmark.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = "unittest-benchmark.cpp"; path = "libvt/test/unittest-benchmark.cpp"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,6 +81,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7811A8E31F6E4B6D00FE18DF /* libvt.a in Frameworks */,
 				7811A8D21F6E41CC00FE18DF /* libgtest.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -94,6 +111,7 @@
 		7811A8B51F6E401000FE18DF /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				7811A8D61F6E44C000FE18DF /* benchmark */,
 			);
 			name = Sources;
 			sourceTree = "<group>";
@@ -103,6 +121,7 @@
 			children = (
 				7811A8B71F6E407200FE18DF /* gtest */,
 				7811A8D41F6E438800FE18DF /* unittest-gtest.cpp */,
+				7811A8DF1F6E4AE000FE18DF /* unittest-benchmark.cpp */,
 			);
 			name = UnitTests;
 			sourceTree = "<group>";
@@ -116,6 +135,17 @@
 			name = gtest;
 			sourceTree = "<group>";
 		};
+		7811A8D61F6E44C000FE18DF /* benchmark */ = {
+			isa = PBXGroup;
+			children = (
+				7811A8D71F6E44F500FE18DF /* benchmark.cpp */,
+				7811A8D81F6E44F500FE18DF /* benchmark.hpp */,
+				7811A8DB1F6E454200FE18DF /* sequence.cpp */,
+				7811A8DC1F6E454200FE18DF /* sequence.hpp */,
+			);
+			name = benchmark;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -123,6 +153,8 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7811A8DA1F6E44F500FE18DF /* benchmark.hpp in Headers */,
+				7811A8DE1F6E454200FE18DF /* sequence.hpp in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -181,6 +213,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				7811A8E21F6E4B6600FE18DF /* PBXTargetDependency */,
 				7811A8D11F6E41C400FE18DF /* PBXTargetDependency */,
 			);
 			name = runUnitTests;
@@ -238,8 +271,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7811A8C21F6E418700FE18DF /* gtest_main.cc in Sources */,
-				7811A8C31F6E418700FE18DF /* gtest-all.cc in Sources */,
+				7811A8D91F6E44F500FE18DF /* benchmark.cpp in Sources */,
+				7811A8DD1F6E454200FE18DF /* sequence.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -257,6 +290,7 @@
 			files = (
 				7811A8D31F6E420000FE18DF /* gtest_main.cc in Sources */,
 				7811A8D51F6E438800FE18DF /* unittest-gtest.cpp in Sources */,
+				7811A8E01F6E4AE000FE18DF /* unittest-benchmark.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -267,6 +301,11 @@
 			isa = PBXTargetDependency;
 			target = 7811A8BB1F6E40AE00FE18DF /* gtest */;
 			targetProxy = 7811A8D01F6E41C400FE18DF /* PBXContainerItemProxy */;
+		};
+		7811A8E21F6E4B6600FE18DF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 7811A8AD1F6E3C8C00FE18DF /* vt */;
+			targetProxy = 7811A8E11F6E4B6600FE18DF /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -313,9 +352,12 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = /usr/local/include;
+				LIBRARY_SEARCH_PATHS = /usr/local/lib;
 				MACOSX_DEPLOYMENT_TARGET = 10.12;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
+				OTHER_LDFLAGS = "-lglog";
 				SDKROOT = macosx;
 			};
 			name = Debug;
@@ -356,8 +398,11 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = /usr/local/include;
+				LIBRARY_SEARCH_PATHS = /usr/local/lib;
 				MACOSX_DEPLOYMENT_TARGET = 10.12;
 				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "-lglog";
 				SDKROOT = macosx;
 			};
 			name = Release;
@@ -367,6 +412,8 @@
 			buildSettings = {
 				DEVELOPMENT_TEAM = 465B8JUQR9;
 				EXECUTABLE_PREFIX = lib;
+				HEADER_SEARCH_PATHS = "$(inherited)";
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -376,6 +423,8 @@
 			buildSettings = {
 				DEVELOPMENT_TEAM = 465B8JUQR9;
 				EXECUTABLE_PREFIX = lib;
+				HEADER_SEARCH_PATHS = "$(inherited)";
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
@@ -386,6 +435,7 @@
 				DEVELOPMENT_TEAM = 465B8JUQR9;
 				EXECUTABLE_PREFIX = lib;
 				HEADER_SEARCH_PATHS = "";
+				LIBRARY_SEARCH_PATHS = "";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SYSTEM_HEADER_SEARCH_PATHS = "$(DEP_GTEST_DIR) $(DEP_GTEST_DIR)/include";
 			};
@@ -397,6 +447,7 @@
 				DEVELOPMENT_TEAM = 465B8JUQR9;
 				EXECUTABLE_PREFIX = lib;
 				HEADER_SEARCH_PATHS = "";
+				LIBRARY_SEARCH_PATHS = "";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SYSTEM_HEADER_SEARCH_PATHS = "$(DEP_GTEST_DIR) $(DEP_GTEST_DIR)/include";
 			};
@@ -406,7 +457,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				DEVELOPMENT_TEAM = 465B8JUQR9;
-				HEADER_SEARCH_PATHS = "";
+				HEADER_SEARCH_PATHS = "$(inherited)";
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SYSTEM_HEADER_SEARCH_PATHS = "$(DEP_GTEST_DIR)/include";
 			};
@@ -416,7 +468,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				DEVELOPMENT_TEAM = 465B8JUQR9;
-				HEADER_SEARCH_PATHS = "";
+				HEADER_SEARCH_PATHS = "$(inherited)";
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SYSTEM_HEADER_SEARCH_PATHS = "$(DEP_GTEST_DIR)/include";
 			};
