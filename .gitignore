@@ -1,0 +1,7 @@
+## Basis
+*.swp
+.DS_Store
+
+## Xcode Project
+vt.xcodeproj/xcuserdata/
+build/
