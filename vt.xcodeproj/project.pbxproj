@@ -357,7 +357,11 @@
 				MACOSX_DEPLOYMENT_TARGET = 10.12;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
-				OTHER_LDFLAGS = "-lglog";
+				OTHER_LDFLAGS = (
+					"-lglog",
+					"-lopencv_core",
+					"-lopencv_imgcodecs",
+				);
 				SDKROOT = macosx;
 			};
 			name = Debug;
@@ -402,7 +406,11 @@
 				LIBRARY_SEARCH_PATHS = /usr/local/lib;
 				MACOSX_DEPLOYMENT_TARGET = 10.12;
 				MTL_ENABLE_DEBUG_INFO = NO;
-				OTHER_LDFLAGS = "-lglog";
+				OTHER_LDFLAGS = (
+					"-lglog",
+					"-lopencv_core",
+					"-lopencv_imgcodecs",
+				);
 				SDKROOT = macosx;
 			};
 			name = Release;
@@ -494,6 +502,7 @@
 				7811A8B41F6E3C8C00FE18DF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		7811A8BD1F6E40AE00FE18DF /* Build configuration list for PBXNativeTarget "gtest" */ = {
 			isa = XCConfigurationList;
@@ -502,6 +511,7 @@
 				7811A8BF1F6E40AE00FE18DF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		7811A8CD1F6E41BF00FE18DF /* Build configuration list for PBXNativeTarget "runUnitTests" */ = {
 			isa = XCConfigurationList;
@@ -510,6 +520,7 @@
 				7811A8CF1F6E41BF00FE18DF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -13,7 +13,9 @@
 #include <iostream>
 #include <vector>
 
+#include <glog/logging.h>
 #include <opencv2/core.hpp>
+#include <opencv2/imgcodecs.hpp>
 
 struct sequence {
 	std::string name;
@@ -24,6 +26,10 @@ struct sequence {
 	std::vector<std::string> image_files;
 	std::vector<cv::Rect> ground_truth_rects;
 	std::vector<cv::Rect> result_rects;
+	
+	bool unfinished();
+	cv::Rect get_init_rect();
+	cv::Mat get_next_frame();
 };
 
 #endif /* sequence_hpp */

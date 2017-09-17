@@ -30,3 +30,11 @@ TEST(Benchmark, StaticMethod) {
 	EXPECT_FLOAT_EQ(r.height, 61);
 	EXPECT_EQ(s->image_files[0], "/Users/zhouyz/Development/Data/OTB50/Bolt/img/0001.jpg");
 }
+
+TEST(Benchmark, Sequence) {
+	auto s = OTB::construct("/Users/zhouyz/Development/Data/OTB50", "Bolt");
+	cv::Mat image = s->get_next_frame();
+	EXPECT_EQ(image.rows, 360); // height
+	EXPECT_EQ(image.cols, 640); // width
+	EXPECT_EQ(image.channels(), 3); // BGR channels
+}
