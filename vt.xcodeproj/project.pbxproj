@@ -17,6 +17,16 @@
 		7811A8DE1F6E454200FE18DF /* sequence.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 7811A8DC1F6E454200FE18DF /* sequence.hpp */; };
 		7811A8E01F6E4AE000FE18DF /* unittest-benchmark.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7811A8DF1F6E4AE000FE18DF /* unittest-benchmark.cpp */; };
 		7811A8E31F6E4B6D00FE18DF /* libvt.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7811A8AE1F6E3C8C00FE18DF /* libvt.a */; };
+		788793311F713D5B007425AB /* hann.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7887932F1F713D5B007425AB /* hann.cpp */; };
+		788793321F713D5B007425AB /* hann.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 788793301F713D5B007425AB /* hann.hpp */; };
+		788793351F71408A007425AB /* label.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 788793331F71408A007425AB /* label.cpp */; };
+		788793361F71408A007425AB /* label.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 788793341F71408A007425AB /* label.hpp */; };
+		788793381F7144B0007425AB /* ffttools.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 788793371F7144B0007425AB /* ffttools.hpp */; };
+		789105611F7026BD0085719C /* imagesc.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7891055F1F7026BD0085719C /* imagesc.cpp */; };
+		789105621F7026BD0085719C /* imagesc.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 789105601F7026BD0085719C /* imagesc.hpp */; };
+		78CDD0001F6E9EE9000450AC /* fhog.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 78CDCFFE1F6E9EE9000450AC /* fhog.cpp */; };
+		78CDD0011F6E9EE9000450AC /* fhog.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 78CDCFFF1F6E9EE9000450AC /* fhog.hpp */; };
+		78E982581F6FA7CB00BD8B14 /* recttools.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 78E982571F6FA7CB00BD8B14 /* recttools.hpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,6 +70,16 @@
 		7811A8DB1F6E454200FE18DF /* sequence.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = sequence.cpp; path = libvt/src/benchmark/sequence.cpp; sourceTree = "<group>"; };
 		7811A8DC1F6E454200FE18DF /* sequence.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = sequence.hpp; path = libvt/src/benchmark/sequence.hpp; sourceTree = "<group>"; };
 		7811A8DF1F6E4AE000FE18DF /* unittest-benchmark.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = "unittest-benchmark.cpp"; path = "libvt/test/unittest-benchmark.cpp"; sourceTree = "<group>"; };
+		7887932F1F713D5B007425AB /* hann.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = hann.cpp; path = libvt/src/utility/hann.cpp; sourceTree = "<group>"; };
+		788793301F713D5B007425AB /* hann.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = hann.hpp; path = libvt/src/utility/hann.hpp; sourceTree = "<group>"; };
+		788793331F71408A007425AB /* label.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = label.cpp; path = libvt/src/utility/label.cpp; sourceTree = "<group>"; };
+		788793341F71408A007425AB /* label.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = label.hpp; path = libvt/src/utility/label.hpp; sourceTree = "<group>"; };
+		788793371F7144B0007425AB /* ffttools.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = ffttools.hpp; path = libvt/src/fft/ffttools.hpp; sourceTree = "<group>"; };
+		7891055F1F7026BD0085719C /* imagesc.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = imagesc.cpp; path = libvt/src/utility/imagesc.cpp; sourceTree = "<group>"; };
+		789105601F7026BD0085719C /* imagesc.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = imagesc.hpp; path = libvt/src/utility/imagesc.hpp; sourceTree = "<group>"; };
+		78CDCFFE1F6E9EE9000450AC /* fhog.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = fhog.cpp; path = libvt/src/feature/hog/fhog.cpp; sourceTree = "<group>"; };
+		78CDCFFF1F6E9EE9000450AC /* fhog.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = fhog.hpp; path = libvt/src/feature/hog/fhog.hpp; sourceTree = "<group>"; };
+		78E982571F6FA7CB00BD8B14 /* recttools.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = recttools.hpp; path = libvt/src/utility/recttools.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,6 +131,9 @@
 		7811A8B51F6E401000FE18DF /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				789105671F702ABB0085719C /* fft */,
+				78E982501F6FA77E00BD8B14 /* utility */,
+				78CDCFF81F6E9EA2000450AC /* feature */,
 				7811A8D61F6E44C000FE18DF /* benchmark */,
 			);
 			name = Sources;
@@ -146,6 +169,45 @@
 			name = benchmark;
 			sourceTree = "<group>";
 		};
+		789105671F702ABB0085719C /* fft */ = {
+			isa = PBXGroup;
+			children = (
+				788793371F7144B0007425AB /* ffttools.hpp */,
+			);
+			name = fft;
+			sourceTree = "<group>";
+		};
+		78CDCFF81F6E9EA2000450AC /* feature */ = {
+			isa = PBXGroup;
+			children = (
+				78CDCFFD1F6E9EBC000450AC /* hog */,
+			);
+			name = feature;
+			sourceTree = "<group>";
+		};
+		78CDCFFD1F6E9EBC000450AC /* hog */ = {
+			isa = PBXGroup;
+			children = (
+				78CDCFFE1F6E9EE9000450AC /* fhog.cpp */,
+				78CDCFFF1F6E9EE9000450AC /* fhog.hpp */,
+			);
+			name = hog;
+			sourceTree = "<group>";
+		};
+		78E982501F6FA77E00BD8B14 /* utility */ = {
+			isa = PBXGroup;
+			children = (
+				7887932F1F713D5B007425AB /* hann.cpp */,
+				788793301F713D5B007425AB /* hann.hpp */,
+				788793331F71408A007425AB /* label.cpp */,
+				788793341F71408A007425AB /* label.hpp */,
+				78E982571F6FA7CB00BD8B14 /* recttools.hpp */,
+				7891055F1F7026BD0085719C /* imagesc.cpp */,
+				789105601F7026BD0085719C /* imagesc.hpp */,
+			);
+			name = utility;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -153,8 +215,15 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				788793361F71408A007425AB /* label.hpp in Headers */,
+				789105661F702AB70085719C /* fft.hpp in Headers */,
 				7811A8DA1F6E44F500FE18DF /* benchmark.hpp in Headers */,
+				788793321F713D5B007425AB /* hann.hpp in Headers */,
+				789105621F7026BD0085719C /* imagesc.hpp in Headers */,
 				7811A8DE1F6E454200FE18DF /* sequence.hpp in Headers */,
+				78CDD0011F6E9EE9000450AC /* fhog.hpp in Headers */,
+				78E982581F6FA7CB00BD8B14 /* recttools.hpp in Headers */,
+				788793381F7144B0007425AB /* ffttools.hpp in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -271,7 +340,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				788793351F71408A007425AB /* label.cpp in Sources */,
+				788793311F713D5B007425AB /* hann.cpp in Sources */,
 				7811A8D91F6E44F500FE18DF /* benchmark.cpp in Sources */,
+				78CDD0001F6E9EE9000450AC /* fhog.cpp in Sources */,
+				789105611F7026BD0085719C /* imagesc.cpp in Sources */,
 				7811A8DD1F6E454200FE18DF /* sequence.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -361,6 +434,11 @@
 					"-lglog",
 					"-lopencv_core",
 					"-lopencv_imgcodecs",
+					"-lopencv_imgproc",
+					"-lopencv_highgui",
+					"-lfftw3f",
+					"-lm",
+					"-lopencv_dnn",
 				);
 				SDKROOT = macosx;
 			};
