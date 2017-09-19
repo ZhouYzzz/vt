@@ -29,7 +29,8 @@ struct sequence {
 	
 	bool unfinished();
 	cv::Rect get_init_rect();
-	cv::Mat get_next_frame();
+	cv::Mat get_current_frame();
+	void step();
 };
 
 #endif /* sequence_hpp */
