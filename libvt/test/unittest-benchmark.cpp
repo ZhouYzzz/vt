@@ -17,7 +17,7 @@ TEST(Benchmark, DISABLED_Benchmark) {
 	EXPECT_EQ(b.sequences().size(), 49); // no Human50
 }
 
-TEST(Benchmark, StaticMethod) {
+TEST(Benchmark, DISABLED_StaticMethod) {
 	auto s = OTB::construct("/Users/zhouyz/Development/Data/OTB50", "Bolt");
 	EXPECT_EQ(s->end_frame - s->start_frame, 350);
 	EXPECT_EQ(s->ground_truth_rects.size(), 350);
@@ -31,9 +31,9 @@ TEST(Benchmark, StaticMethod) {
 	EXPECT_EQ(s->image_files[0], "/Users/zhouyz/Development/Data/OTB50/Bolt/img/0001.jpg");
 }
 
-TEST(Benchmark, Sequence) {
+TEST(Benchmark, DISABLED_Sequence) {
 	auto s = OTB::construct("/Users/zhouyz/Development/Data/OTB50", "Bolt");
-	cv::Mat image = s->get_next_frame();
+	cv::Mat image = s->get_current_frame();
 	EXPECT_EQ(image.rows, 360); // height
 	EXPECT_EQ(image.cols, 640); // width
 	EXPECT_EQ(image.channels(), 3); // BGR channels

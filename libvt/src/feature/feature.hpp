@@ -21,7 +21,7 @@ protected:
 
 	int n_out_; // num of feature cells (vector.size())
 	std::vector<float*> out_; // output data ptr (different size)
-	std::vector<cv::Mat> output_; // output features (H*W, C)
+	std::vector<cv::Mat> output_; // output features (C,H*W,1)
 	
 	std::vector<int> out_channel_; // output data num of channel
 	std::vector<cv::Size2i> out_size_; // output spatial size (H,W), W-major

@@ -28,6 +28,9 @@
 		789105621F7026BD0085719C /* imagesc.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 789105601F7026BD0085719C /* imagesc.hpp */; };
 		789105651F702AB70085719C /* fft.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 789105631F702AB70085719C /* fft.cpp */; };
 		789105661F702AB70085719C /* fft.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 789105641F702AB70085719C /* fft.hpp */; };
+		78C5E67A1F761F400036567D /* tracker.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 78C5E6781F761F400036567D /* tracker.cpp */; };
+		78C5E67B1F761F400036567D /* tracker.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 78C5E6791F761F400036567D /* tracker.hpp */; };
+		78C5E67D1F7625A60036567D /* unittest-utility.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 78C5E67C1F7625A60036567D /* unittest-utility.cpp */; };
 		78CDCFFB1F6E9EB8000450AC /* feature.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 78CDCFF91F6E9EB8000450AC /* feature.cpp */; };
 		78CDCFFC1F6E9EB8000450AC /* feature.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 78CDCFFA1F6E9EB8000450AC /* feature.hpp */; };
 		78CDD0001F6E9EE9000450AC /* fhog.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 78CDCFFE1F6E9EE9000450AC /* fhog.cpp */; };
@@ -112,10 +115,14 @@
 		788793331F71408A007425AB /* label.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = label.cpp; path = libvt/src/utility/label.cpp; sourceTree = "<group>"; };
 		788793341F71408A007425AB /* label.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = label.hpp; path = libvt/src/utility/label.hpp; sourceTree = "<group>"; };
 		788793371F7144B0007425AB /* ffttools.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = ffttools.hpp; path = libvt/src/fft/ffttools.hpp; sourceTree = "<group>"; };
+		788E2FC01F78A9EF009B8EBA /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = SOURCE_ROOT; };
 		7891055F1F7026BD0085719C /* imagesc.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = imagesc.cpp; path = libvt/src/utility/imagesc.cpp; sourceTree = "<group>"; };
 		789105601F7026BD0085719C /* imagesc.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = imagesc.hpp; path = libvt/src/utility/imagesc.hpp; sourceTree = "<group>"; };
 		789105631F702AB70085719C /* fft.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = fft.cpp; path = libvt/src/fft/fft.cpp; sourceTree = "<group>"; };
 		789105641F702AB70085719C /* fft.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = fft.hpp; path = libvt/src/fft/fft.hpp; sourceTree = "<group>"; };
+		78C5E6781F761F400036567D /* tracker.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = tracker.cpp; path = libvt/src/tracker/tracker.cpp; sourceTree = "<group>"; };
+		78C5E6791F761F400036567D /* tracker.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = tracker.hpp; path = libvt/src/tracker/tracker.hpp; sourceTree = "<group>"; };
+		78C5E67C1F7625A60036567D /* unittest-utility.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = "unittest-utility.cpp"; path = "libvt/test/unittest-utility.cpp"; sourceTree = "<group>"; };
 		78CDCFF91F6E9EB8000450AC /* feature.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = feature.cpp; path = libvt/src/feature/feature.cpp; sourceTree = "<group>"; };
 		78CDCFFA1F6E9EB8000450AC /* feature.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = feature.hpp; path = libvt/src/feature/feature.hpp; sourceTree = "<group>"; };
 		78CDCFFE1F6E9EE9000450AC /* fhog.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = fhog.cpp; path = libvt/src/feature/hog/fhog.cpp; sourceTree = "<group>"; };
@@ -176,6 +183,7 @@
 		7811A8A51F6E3C8C00FE18DF = {
 			isa = PBXGroup;
 			children = (
+				788E2FC01F78A9EF009B8EBA /* README.md */,
 				7811A8B61F6E406000FE18DF /* UnitTests */,
 				7811A8B51F6E401000FE18DF /* Sources */,
 				7811A8AF1F6E3C8C00FE18DF /* Products */,
@@ -196,6 +204,7 @@
 		7811A8B51F6E401000FE18DF /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				78C5E6731F761EFF0036567D /* tracker */,
 				789105671F702ABB0085719C /* fft */,
 				78E982501F6FA77E00BD8B14 /* utility */,
 				78E9824B1F6F9DF300BD8B14 /* parameter */,
@@ -215,6 +224,7 @@
 				78CDD0021F6E9F15000450AC /* unittest-feature.cpp */,
 				78E982591F6FC12200BD8B14 /* unittest-fftw.cpp */,
 				78E5233F1F70EA87006A7FBE /* unittest-dnn.cpp */,
+				78C5E67C1F7625A60036567D /* unittest-utility.cpp */,
 			);
 			name = UnitTests;
 			sourceTree = "<group>";
@@ -247,6 +257,15 @@
 				789105641F702AB70085719C /* fft.hpp */,
 			);
 			name = fft;
+			sourceTree = "<group>";
+		};
+		78C5E6731F761EFF0036567D /* tracker */ = {
+			isa = PBXGroup;
+			children = (
+				78C5E6781F761F400036567D /* tracker.cpp */,
+				78C5E6791F761F400036567D /* tracker.hpp */,
+			);
+			name = tracker;
 			sourceTree = "<group>";
 		};
 		78CDCFF81F6E9EA2000450AC /* feature */ = {
@@ -345,6 +364,7 @@
 				78E982581F6FA7CB00BD8B14 /* recttools.hpp in Headers */,
 				78E5233E1F70E710006A7FBE /* hog.hpp in Headers */,
 				78E5233A1F70E6FE006A7FBE /* deep.hpp in Headers */,
+				78C5E67B1F761F400036567D /* tracker.hpp in Headers */,
 				78CDCFFC1F6E9EB8000450AC /* feature.hpp in Headers */,
 				788793381F7144B0007425AB /* ffttools.hpp in Headers */,
 			);
@@ -491,6 +511,7 @@
 				78E982531F6FA79D00BD8B14 /* utility.cpp in Sources */,
 				788793351F71408A007425AB /* label.cpp in Sources */,
 				78E523391F70E6FE006A7FBE /* deep.cpp in Sources */,
+				78C5E67A1F761F400036567D /* tracker.cpp in Sources */,
 				780432F91F72D3A900079ECE /* circshift.cpp in Sources */,
 				78E9824E1F6F9E1C00BD8B14 /* parameters.cpp in Sources */,
 				78E5233D1F70E710006A7FBE /* hog.cpp in Sources */,
@@ -520,6 +541,7 @@
 				78E9825A1F6FC12200BD8B14 /* unittest-fftw.cpp in Sources */,
 				78CDD0031F6E9F15000450AC /* unittest-feature.cpp in Sources */,
 				78E523401F70EA87006A7FBE /* unittest-dnn.cpp in Sources */,
+				78C5E67D1F7625A60036567D /* unittest-utility.cpp in Sources */,
 				7811A8E01F6E4AE000FE18DF /* unittest-benchmark.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

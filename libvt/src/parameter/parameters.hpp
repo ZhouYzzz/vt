@@ -15,6 +15,8 @@ struct parameter {
 	bool visualization = true;
 	
 	float search_window_scale = 4;
+	
+	float lambda = 1e-3;
 };
 
 #endif /* parameters_hpp */

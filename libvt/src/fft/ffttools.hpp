@@ -183,6 +183,23 @@ cv::Mat complexDivision(cv::Mat a, cv::Mat b)
     cv::merge(pres, res);
     return res;
 }
+	
+void complexDivision(cv::Mat a, cv::Mat b, cv::OutputArray dst) {
+	std::vector<cv::Mat> pa;
+	std::vector<cv::Mat> pb;
+	cv::split(a, pa);
+	cv::split(b, pb);
+		
+	cv::Mat divisor = 1. / (pb[0].mul(pb[0]) + pb[1].mul(pb[1]));
+		
+	std::vector<cv::Mat> pres;
+		
+	pres.push_back((pa[0].mul(pb[0]) + pa[1].mul(pb[1])).mul(divisor));
+	pres.push_back((pa[1].mul(pb[0]) + pa[0].mul(pb[1])).mul(divisor));
+		
+	cv::merge(pres, dst);
+}
+
 
 void rearrange(cv::Mat &img)
 {
