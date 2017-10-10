@@ -6,12 +6,9 @@
 
 #include <glog/logging.h>
 
-namespace vt {
-
 using std::vector;
 using std::string;
 using std::strcmp;
-
-};
+using std::stringstream;
 
 #endif

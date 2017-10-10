@@ -60,7 +60,7 @@ TEST(FFTW3, DISABLED_CV_DFT) {
 	
 	LOG(INFO) << A[0];
 	
-	FFTTools::rearrange(A[0]);
+//	FFTTools::rearrange(A[0]);
 	
 	LOG(INFO) << A[0];
 }

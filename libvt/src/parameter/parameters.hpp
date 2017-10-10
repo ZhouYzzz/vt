@@ -13,6 +13,7 @@
 
 struct parameter {
 	bool visualization = true;
+	bool debug = true;
 	
 	float search_window_scale = 4;
 	

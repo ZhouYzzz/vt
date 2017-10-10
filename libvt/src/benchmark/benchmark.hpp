@@ -6,30 +6,26 @@
 //  Copyright © 2017 Yizhuang Zhou. All rights reserved.
 //
 
-#ifndef benchmark_hpp
-#define benchmark_hpp
+#ifndef BENCHMARK_HPP_
+#define BENCHMARK_HPP_
 
-#include <stdio.h>
-#include <dirent.h>
 #include <iostream>
 #include <vector>
-#include <fstream>
 
-#include <glog/logging.h>
-#include <opencv2/core.hpp>
-
+#include "common.hpp"
 #include "sequence.hpp"
+
 
 class Benchmark {
 protected:
-	std::string root_dir_;
-	std::vector<sequence*> sequences_;
+	string root_dir_;
+	vector<sequence*> sequences_;
 	
 public:
 	Benchmark() {}
 	~Benchmark() {}
 	
-	std::vector<sequence*> sequences() { return sequences_; }
+	vector<sequence*> sequences() { return sequences_; }
 	
 };
 
@@ -37,9 +33,19 @@ class OTB : public Benchmark {
 public:
 	OTB() {}
 	~OTB() {}
-	OTB(std::string root_dir);
+	OTB(string root_dir);
 	
-	static sequence * construct(std::string root_dir, std::string seq_name);
+	static sequence * construct(string root_dir, string seq_name);
 };
 
-#endif /* benchmark_hpp */
+class VOT : public Benchmark {
+public:
+	VOT() {}
+	~VOT() {}
+	VOT(string root_dir);
+
+	static sequence * construct(string root_dir, string seq_name);
+};
+
+
+#endif /* BENCHMARK_HPP_ */

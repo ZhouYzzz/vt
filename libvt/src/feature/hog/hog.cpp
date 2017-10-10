@@ -10,6 +10,8 @@
 
 #include "fhog.hpp"
 #include "hann.hpp"
+#include <glog/logging.h>
+//#include "imagesc.hpp"
 
 Hog::Hog(cv::Size2i i_sz) {
 		n_out_ = 1;
@@ -64,7 +66,56 @@ void Hog::compute() {
 	freeFeatureMapObject(&map);
 }
 
-// void Hog::reshape(cv::Size sz) {
-// 	input_.create(sz, CV_32FC3);
-// 	compute();
-// }
+// **************************
+
+HogFeature::HogFeature() {}
+HogFeature::~HogFeature() {
+	src.release();
+	dst.release();
+}
+
+HogFeature::HogFeature(Size2i input_size, hog_parameter param) {
+	src.create(input_size.height, input_size.width, CV_32FC3);
+	output_sz.height = input_size.height / 4;
+	output_sz.width = input_size.width / 4;
+	dst.create(31, output_sz.height * output_sz.width, CV_32F);
+//	win = Mat(1,output_sz.height*output_sz.width,CV_32F,hann(output_sz).data);
+	win = hann(output_sz);
+}
+
+void HogFeature::compute() {
+	IplImage ipl = src;
+	CvLSVMFeatureMapCaskade *map;
+	getFeatureMaps(&ipl, 4, &map);
+	PCAFeatureMaps(map);
+	Mat feature = Mat(map->sizeX * map->sizeY, map->numFeatures, CV_32F, map->map);
+	transpose(feature, dst);
+	
+//	for (int i = 0; i < map->numFeatures; i++) {
+//		Mat row = dst.row(i);
+//		multiply(row, win, row);
+//	}
+	
+	for (int i = 0; i < map->numFeatures; i++) {
+		Mat selected_mat = cv::Mat(map->sizeY, map->sizeX, CV_32F, dst.row(i).data);
+		multiply(selected_mat, win, selected_mat);
+	}
+	
+	freeFeatureMapObject(&map);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

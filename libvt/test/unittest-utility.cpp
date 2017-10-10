@@ -14,7 +14,7 @@
 #include "circshift.hpp"
 #include "fft.hpp"
 
-TEST(Util, Circshift) {
+TEST(Util, DISABLED_Circshift) {
 	cv::Mat A = cv::Mat(9,11,CV_32F,cv::Scalar(0));
 	A.at<float>(0, 0) = 1;
 	LOG(INFO) << A;
@@ -24,7 +24,7 @@ TEST(Util, Circshift) {
 //	LOG(INFO) << -7 % 3;
 }
 
-TEST(Util, FFT) {
+TEST(Util, DISABLED_FFT) {
 	cv::Mat A = cv::Mat(3,3,CV_32F,cv::Scalar(0));
 	A.at<float>(0,0) = 1;
 	cv::Mat Af;

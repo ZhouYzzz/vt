@@ -28,6 +28,8 @@ protected:
 	
 	std::vector<cv::Mat> hann_;
 	
+	std::vector<int> downsample_factor_;
+	
 public:
 	Feature() {}
 	~Feature() {}
@@ -36,6 +38,7 @@ public:
 	std::vector<cv::Mat> & output() { return output_; }
 	std::vector<cv::Size2i> & output_size() { return out_size_; }
 	std::vector<int> & output_channel() { return out_channel_; }
+	std::vector<int> & downsample_factor() { return downsample_factor_; }
 	int num_output() { return n_out_; }
 //	virtual void compute() {}
 //	virtual void reshape(cv::Size sz) {}

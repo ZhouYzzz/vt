@@ -16,6 +16,7 @@
 #include "benchmark.hpp"
 #include "parameters.hpp"
 #include "tracker.hpp"
+#include "trackerKCF.hpp"
 
 int main(int argc, const char * argv[]) {
 	parameter params;
@@ -29,9 +30,12 @@ int main(int argc, const char * argv[]) {
 	im = s->get_current_frame();
 	rect = s->get_init_rect();
 	
-	DCF tracker(params);
+//	DCF tracker(params);
+	KCF tracker(params);
 	
 	tracker.init(im, rect);
+	
+	s->step();
 	
 	if (params.visualization) {
 		cv::rectangle(im, rect, cv::Scalar(0,0,255), 2); // draw groundtruth rect
@@ -46,13 +50,13 @@ int main(int argc, const char * argv[]) {
 	while (s->unfinished()) {
 		im = s->get_current_frame();
 		
-//		tracker.update(im);
+		tracker.update(im);
 		
 		if (params.visualization) {
 			cv::rectangle(im, s->ground_truth_rects[s->current_frame], cv::Scalar(0,255,0), 2); // draw groundtruth rect
-//			cv::rectangle(im, tracker.getrect(), cv::Scalar(0,0,255), 2); // draw detected rect
+			cv::rectangle(im, tracker.getrect(), cv::Scalar(0,0,255), 2); // draw detected rect
 			cv::imshow(sequence_name, im);
-			cv::waitKey(80);
+			cv::waitKey();
 		}
 		// next frame
 		s->step();
